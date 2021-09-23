@@ -1,0 +1,683 @@
+
+// ===================reseets========================
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+// =========================================
+
+// ==============fonts======================
+$bold:"Panton-bold";
+$regular:"panton-regular";
+$light: "panton-light";
+$thin: "Panton-thin";
+$medium: "panton-medium";
+$semibold: "panton-semiBold";
+// =================end=====================
+$bg_color:#cfecfa;
+
+
+
+$color-background: #F5F5F5;
+$color-main: #1abc9c;
+$color-active: #FFF;
+$color-link: rgb(0, 0, 0);
+// =========================================        
+
+	@mixin font-type($font-name){
+		@if ($font-name == paragraph) {
+			font-family: $light;
+			font-size: 22px;
+			line-height: 1.4;
+			letter-spacing: 1px;
+			color: black;
+		}@else if($font-name == heading){
+
+		}
+		
+	}
+// =========mixins==============
+
+//header
+header{
+	width: 100%;
+	height: 13vh;
+	padding: 15px 10px 0px;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	img{
+		width: 40%;
+	}
+
+	.menu{
+		width: 30%;
+		position: relative;
+		cursor: pointer;
+		.line{
+			background-color: white;
+			width: 55%;
+			height: 6px;
+			border-radius: 5px;
+			transition: all .3s ease-in-out;
+			&::before{
+				content: "";
+				background-color: rgb(255, 255, 255);
+				width: 55%;
+				height: 6px;
+				position: absolute;
+				transform: translateY(-16px);
+				border-radius: 5px;
+				transition: all .3s ease-in-out;
+			}
+
+			&::after{
+				content: "";
+				background-color: rgb(255, 255, 255);
+				width: 55%;
+				height: 6px;
+				position: absolute;
+				transform: translateY(16px);
+				border-radius: 5px;
+				transition: all .3s ease-in-out;
+			}
+		}
+
+		&.line-open{
+			.line{
+                background-color:transparent;
+                &::before{
+                    transform: rotate(45deg);
+                }
+
+                &::after{
+                    transform: rotate(-45deg);
+                }
+            }
+		}
+	}
+
+
+	ul{
+		display: none;
+		li{
+			a{
+				text-decoration: none;
+				color: white;
+				font-family: $bold;
+			}
+		}
+	}
+
+
+
+	&.open{
+		height: 100vh;
+		background-color: rgb(49, 49, 49);
+		ul{
+			opacity: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			li{
+				padding: 20px 0px;
+				margin: 10px 0px;
+				a{
+					font-size: 22px;
+				}
+			}
+			.second{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				.Contact{
+					font-size:16px;
+					padding: 0px 10px;
+				}
+			}
+		}
+		.menu{
+			position:absolute;
+			top: 7%;
+			left: 4%;
+		}
+		img{
+			position:absolute;
+			top: 3%;
+			right: 5%;
+		}
+	}
+
+
+}
+//end here
+
+// banner
+.banner{
+	height: 85vh;
+	background:linear-gradient(to right, rgba(0, 0, 0, 0.33)
+	, rgba(0, 0, 0, 0.33)
+	), url("/img/footerball.png");
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h1{
+		color: white;
+		font-size: 44px;
+		font-family: $semibold;
+		text-transform: capitalize;
+	}
+
+}
+// end
+
+//Management
+.treatment{
+	margin: 35px 0px;
+	padding: 20px 10px;
+	text-align: center;
+	h3{
+		font-family:$semibold;
+		font-size: 18px;
+		margin: 10px 0px;
+	}
+	hr{
+		opacity: 1;
+		background-color: gray;
+		padding: 1.5px;
+
+	}
+
+	.treatment-text{
+		display: flex;
+		flex-direction: column;
+		h2{
+			font-family: $bold;
+			font-size: 21px;
+			line-height: 1.4;
+			margin: 10px 0px;
+		}
+
+		.text{
+			p{
+				font-family: $semibold;
+				font-size: 15px;
+				margin: 10px 0px;
+				line-height: 1.4;
+			}
+		}
+	}
+}
+//end here
+
+//Financial
+.Financial{
+	margin: 35px 0px;
+	padding: 45px 10px;
+	text-align: center;
+	background-color: black;
+	h3{
+		font-family:$semibold;
+		font-size: 18px;
+		margin: 10px 0px;
+		color: white;
+	}
+	hr{
+		opacity: 1;
+		background-color: rgb(255, 255, 255);
+		padding: 1.5px;
+
+	}
+
+	.Financial-text{
+		display: flex;
+		flex-direction: column;
+		h2{
+			font-family: $bold;
+			font-size: 21px;
+			line-height: 1.4;
+			margin: 10px 0px;
+			color: white;
+		}
+
+		.text{
+			p{
+				font-family: $semibold;
+				font-size: 15px;
+				margin: 10px 0px;
+				line-height: 1.4;
+				color: white;
+			}
+		}
+	}
+}
+//end here
+
+//Portfolio
+.Portfolio{
+	margin: 35px 0px;
+	padding: 20px 10px;
+	text-align: center;
+	h3{
+		font-family:$semibold;
+		font-size: 18px;
+		margin: 10px 0px;
+	}
+	hr{
+		opacity: 1;
+		background-color: gray;
+		padding: 1.5px;
+
+	}
+
+	.Portfolio-text{
+		display: flex;
+		flex-direction: column;
+		h2{
+			font-family: $bold;
+			font-size: 21px;
+			line-height: 1.4;
+			margin: 10px 0px;
+		}
+
+		.text{
+			p{
+				font-family: $semibold;
+				font-size: 15px;
+				margin: 10px 0px;
+				line-height: 1.4;
+			}
+		}
+	}
+}
+//end here
+
+// footer
+footer{
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+	text-align: center;
+	padding: 20px 0px;
+	img{
+		width: 50%;
+		margin: 0px auto;
+	}
+	hr{
+		opacity: 1;
+		background-color: gray;
+		padding: 1px;
+		width: 92%;
+		margin: 20px auto;
+	}
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: left;
+		li{
+			margin: 10px 26px;
+			a{
+				text-decoration: none;
+				color: white;
+				font-family: $semibold;
+				font-size:18px ;
+			}
+		}
+	}
+}
+// end here
+
+
+
+
+// ====================i-pad===================
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	header{
+		padding: 0px 30px;
+		img{
+			width: 25%;
+		}
+
+		.menu{
+			width: 15%;
+		}
+
+		&.open{
+			ul{
+				flex-direction: row;
+				li{
+					a{
+						font-size: 44px;
+					}
+				}
+
+				.second{
+					margin: 0px 30px;
+					flex-direction: column;
+					.Contact{
+						font-size:28px;
+					}
+				}
+			}
+		}
+	}
+
+	.banner{
+		height: 65vh;
+		h1{
+			font-size: 46px;
+		}
+
+	}
+
+	.treatment{
+		margin: 40px 0px 30px;
+		padding: 30px 25px;
+		text-align: left;
+		h3{
+			font-size: 26px;
+		}
+		.treatment-text{
+			flex-direction: row;
+			h2{
+				width: 40%;
+				font-size: 24px;
+			}
+
+			.text{
+				width: 60%;
+				p{
+					font-size: 17px;
+				}
+			}
+		}
+
+
+	}
+
+	.Financial{
+		margin: 40px 0px 30px;
+		padding: 30px 25px;
+		text-align: left;
+		h3{
+			font-size: 26px;
+		}
+		.Financial-text{
+			flex-direction: row;
+			h2{
+				width: 40%;
+				font-size: 24px;
+			}
+
+			.text{
+				width: 60%;
+				p{
+					font-size: 17px;
+				}
+			}
+		}
+
+
+	}
+
+	.Portfolio{
+		margin: 40px 0px 30px;
+		padding: 30px 25px;
+		text-align: left;
+		h3{
+			font-size: 26px;
+		}
+		.Portfolio-text{
+			flex-direction: row;
+			h2{
+				width: 40%;
+				font-size: 24px;
+			}
+
+			.text{
+				width: 60%;
+				p{
+					font-size: 17px;
+				}
+			}
+		}
+
+
+	}
+
+	footer{
+		padding: 40px 0px 5px;
+		img{
+			width: 30%;
+		}
+		hr{
+			margin: 20px auto;
+		}
+		ul{
+			li{
+				a{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+// =================end here===================
+
+
+// ====================laptop==================
+@media (min-width: 1200px) {
+	header{
+		height: 15vh;
+		padding: 0px 40px;
+		align-items: center;
+		img{
+			width: 18%;
+		}
+		.menu{
+			width: 8%;
+		}
+
+		&.open{
+			ul{
+				flex-direction: row;
+				li{
+					a{
+						font-size: 53px;
+						transition: color .2s ease-in-out;
+						&:hover{
+							color:gray;
+						}
+					}
+				}
+
+				.second{
+					margin: 0px 30px;
+					flex-direction: column;
+					.Contact{
+						font-size:29px;
+					}
+				}
+			}
+		}
+	}
+
+	.banner{
+		height: 100vh;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		h1{
+			font-size:  54px;
+		}
+	}
+
+	.treatment{
+		margin: 10px 0px;
+		padding: 10% 50px;
+		text-align: left;
+		h3{
+			font-size: 25px;
+		}
+		hr{
+			margin: 20px auto 60px;
+			padding: 2px;
+		}
+		.treatment-text{
+			flex-direction: row;
+			justify-content: space-between;
+			h2{
+				width: 30%;
+				font-size: 44px;
+				margin: 0px;
+			}
+
+			.text{
+				width: 60%;
+				p{
+					font-size: 22px;
+					margin: 0px 0px 40px ;
+				}
+			}
+		}
+
+
+	}
+
+	.Financial{
+		margin: 10px 0px;
+		padding: 10% 50px;
+		text-align: left;
+		h3{
+			font-size: 25px;
+		}
+		hr{
+			margin: 20px auto 60px;
+			padding: 2px;
+		}
+		.Financial-text{
+			flex-direction: row;
+			justify-content: space-between;
+			h2{
+				width: 30%;
+				font-size: 44px;
+				margin: 0px;
+			}
+
+			.text{
+				width: 60%;
+				p{
+					font-size: 22px;
+					margin: 0px 0px 40px ;
+					opacity: .8;
+				}
+			}
+		}
+
+
+	}
+
+	.Portfolio{
+		margin: 10px 0px;
+		padding: 10% 50px;
+		text-align: left;
+		h3{
+			font-size: 25px;
+		}
+		hr{
+			margin: 20px auto 60px;
+			padding: 2px;
+		}
+		.Portfolio-text{
+			flex-direction: row;
+			justify-content: space-between;
+			h2{
+				width: 30%;
+				font-size: 44px;
+				margin: 0px;
+			}
+
+			.text{
+				width: 60%;
+				p{
+					font-size: 22px;
+					margin: 0px 0px 40px ;
+				}
+			}
+		}
+
+
+	}
+
+	footer{
+		padding: 60px 0px 0px;
+		img{
+			width: 20%;
+		}
+		hr{
+			padding: 2px;
+			opacity: 1;
+			background-color: white;
+			margin: 50px auto 20px;
+		}
+
+		ul{
+			li{
+				a{
+					font-size: 28px;
+				}
+			}
+		}
+	}
+
+	
+}
+// ===================end here=================

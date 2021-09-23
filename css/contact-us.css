@@ -1,0 +1,635 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  width: 100%;
+  height: 13vh;
+  padding: 15px 10px 0px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 40%;
+}
+header .menu {
+  width: 30%;
+  position: relative;
+  cursor: pointer;
+}
+header .menu .line {
+  background-color: white;
+  width: 55%;
+  height: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu .line::before {
+  content: "";
+  background-color: white;
+  width: 55%;
+  height: 6px;
+  position: absolute;
+  transform: translateY(-16px);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu .line::after {
+  content: "";
+  background-color: white;
+  width: 55%;
+  height: 6px;
+  position: absolute;
+  transform: translateY(16px);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu.line-open .line {
+  background-color: transparent;
+}
+header .menu.line-open .line::before {
+  transform: rotate(45deg);
+}
+header .menu.line-open .line::after {
+  transform: rotate(-45deg);
+}
+header ul {
+  display: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Panton-bold";
+}
+header.open {
+  height: 100vh;
+  background-color: #313131;
+}
+header.open ul {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+header.open ul li {
+  padding: 20px 0px;
+  margin: 10px 0px;
+}
+header.open ul li a {
+  font-size: 22px;
+}
+header.open ul .second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header.open ul .second .Contact {
+  font-size: 16px;
+  padding: 0px 10px;
+}
+header.open .menu {
+  position: absolute;
+  top: 7%;
+  left: 4%;
+}
+header.open img {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+.banner {
+  height: 85vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.501)), url("/img/contact-us.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  color: white;
+  font-size: 44px;
+  font-family: "panton-semiBold";
+  text-transform: capitalize;
+}
+
+.touch {
+  margin: 35px 0px;
+  padding: 20px 10px;
+  text-align: center;
+}
+.touch h3 {
+  font-family: "panton-semiBold";
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.touch hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1.5px;
+}
+.touch .touch-text {
+  display: flex;
+  flex-direction: column;
+}
+.touch .touch-text h2 {
+  font-family: "Panton-bold";
+  font-size: 21px;
+  line-height: 1.4;
+  margin: 10px 0px;
+}
+.touch .touch-text .text p {
+  font-family: "panton-semiBold";
+  font-size: 15px;
+  margin: 10px 0px;
+  line-height: 1.4;
+}
+
+.Address {
+  margin: 35px 0px 0px;
+  padding: 20px 10px;
+  text-align: center;
+  background-color: #FAFAFA;
+}
+.Address h3 {
+  font-family: "panton-semiBold";
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.Address hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1.5px;
+}
+.Address .Address-con {
+  display: flex;
+  flex-direction: column;
+}
+.Address .Address-con .location {
+  margin: 15px 0px;
+}
+.Address .Address-con .location h2 {
+  font-family: "Panton-bold";
+  font-size: 26px;
+  margin: 15px 0px;
+}
+.Address .Address-con .location span h4 {
+  font-family: "panton-semiBold";
+  margin: 10px 0px;
+  font-size: 14px;
+}
+
+.newslater {
+  margin: 0px 0px 35px;
+  padding: 40px 10px;
+  text-align: center;
+  background-image: url(/img/cartry.png);
+  background-position: center;
+  background-size: cover;
+}
+.newslater h3 {
+  font-family: "panton-semiBold";
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.newslater hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1.5px;
+}
+.newslater form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.newslater form span {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.newslater form span label {
+  font-family: "Panton-bold";
+  font-size: 22px;
+  margin: 10px;
+  text-transform: capitalize;
+}
+.newslater form span input {
+  width: 80%;
+  margin: 0px auto;
+  padding: 0.5rem;
+  font-family: "panton-semiBold";
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+.newslater form span textarea {
+  width: 85%;
+  margin: 0px auto 30px;
+  font-family: "panton-semiBold";
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+.newslater form button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  height: 40px;
+  width: 50%;
+  color: white;
+  outline: none;
+  border: black;
+  font-family: "Panton-bold";
+  font-size: 22px;
+  padding: 0px 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  text-align: center;
+  padding: 20px 0px;
+}
+footer img {
+  width: 50%;
+  margin: 0px auto;
+}
+footer hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1px;
+  width: 92%;
+  margin: 20px auto;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+footer ul li {
+  margin: 10px 26px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "panton-semiBold";
+  font-size: 18px;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    padding: 0px 30px;
+  }
+  header img {
+    width: 25%;
+  }
+  header .menu {
+    width: 15%;
+  }
+  header.open ul {
+    flex-direction: row;
+  }
+  header.open ul li a {
+    font-size: 44px;
+  }
+  header.open ul .second {
+    margin: 0px 30px;
+    flex-direction: column;
+  }
+  header.open ul .second .Contact {
+    font-size: 28px;
+  }
+
+  .banner {
+    height: 65vh;
+  }
+  .banner h1 {
+    font-size: 46px;
+  }
+
+  .touch {
+    margin: 40px 0px 30px;
+    padding: 30px 25px;
+    text-align: left;
+    justify-content: space-between;
+  }
+  .touch h3 {
+    font-size: 26px;
+  }
+  .touch .touch-text {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .touch .touch-text h2 {
+    width: 40%;
+    font-size: 30px;
+  }
+  .touch .touch-text .text {
+    width: 55%;
+  }
+  .touch .touch-text .text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .Address {
+    margin: 40px 0px 30px;
+    padding: 30px 25px;
+    text-align: left;
+  }
+  .Address h3 {
+    font-size: 26px;
+  }
+  .Address .Address-con {
+    padding: 0px 40px;
+    flex-direction: column;
+  }
+  .Address .Address-con .location {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .Address .Address-con .location h2 {
+    font-size: 28px;
+    width: 30%;
+  }
+  .Address .Address-con .location span {
+    width: 61%;
+  }
+  .Address .Address-con .location span h4 {
+    font-size: 18px;
+  }
+
+  .newslater {
+    margin: 40px 0px 30px;
+    padding: 30px 25px;
+    text-align: left;
+  }
+  .newslater h3 {
+    font-size: 26px;
+  }
+  .newslater form {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .newslater form span {
+    align-items: center;
+    flex-direction: row;
+    width: 83%;
+    margin: 20px auto;
+  }
+  .newslater form span label {
+    width: 30%;
+    margin: 0;
+    font-size: 28px;
+  }
+  .newslater form span input {
+    width: 50%;
+    margin: 0px;
+  }
+  .newslater form span textarea {
+    width: 50%;
+    margin: 0px 0px 30px;
+    height: 70px;
+  }
+  .newslater form button {
+    width: 20%;
+    padding: 1.5rem 0.7rem;
+    position: relative;
+    right: -6.5rem;
+  }
+
+  footer {
+    padding: 40px 0px 5px;
+  }
+  footer img {
+    width: 30%;
+  }
+  footer hr {
+    margin: 20px auto;
+  }
+  footer ul li a {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    height: 15vh;
+    padding: 0px 40px;
+    align-items: center;
+  }
+  header img {
+    width: 18%;
+  }
+  header .menu {
+    width: 8%;
+  }
+  header.open ul {
+    flex-direction: row;
+  }
+  header.open ul li a {
+    font-size: 53px;
+    transition: color 0.2s ease-in-out;
+  }
+  header.open ul li a:hover {
+    color: gray;
+  }
+  header.open ul .second {
+    margin: 0px 30px;
+    flex-direction: column;
+  }
+  header.open ul .second .Contact {
+    font-size: 29px;
+  }
+
+  .banner {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .banner h1 {
+    font-size: 54px;
+  }
+
+  .touch {
+    margin: 10px 0px;
+    padding: 10% 50px;
+    text-align: left;
+  }
+  .touch h3 {
+    font-size: 25px;
+  }
+  .touch hr {
+    margin: 20px auto 60px;
+    padding: 2px;
+  }
+  .touch .touch-text {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 30px;
+  }
+  .touch .touch-text h2 {
+    width: 32%;
+    font-size: 44px;
+    margin: 0px;
+  }
+  .touch .touch-text .text {
+    width: 60%;
+  }
+  .touch .touch-text .text p {
+    font-size: 22px;
+    margin: 0px 0px 25px;
+    line-height: 1.4;
+  }
+
+  .Address {
+    padding: 5% 50px 10%;
+    text-align: left;
+  }
+  .Address h3 {
+    font-size: 26px;
+  }
+  .Address .Address-con {
+    padding: 0px 40px;
+    flex-direction: column;
+    width: 70%;
+    margin: 40px auto 0px;
+  }
+  .Address .Address-con .location {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .Address .Address-con .location h2 {
+    font-size: 40px;
+    width: 30%;
+  }
+  .Address .Address-con .location span {
+    width: 61%;
+    margin: 20px 0px;
+  }
+  .Address .Address-con .location span h4 {
+    font-size: 25px;
+  }
+
+  .newslater {
+    margin: 40px 0px 30px;
+    padding: 0 50px 10%;
+    text-align: left;
+  }
+  .newslater h3 {
+    font-size: 25px;
+  }
+  .newslater form {
+    width: 70%;
+    margin: 40px auto 0px;
+  }
+  .newslater form span {
+    align-items: center;
+    flex-direction: row;
+    width: 83%;
+    margin: 30px auto;
+  }
+  .newslater form span label {
+    width: 30%;
+    margin: 0;
+    font-size: 28px;
+  }
+  .newslater form span input {
+    width: 50%;
+    margin: 0px;
+  }
+  .newslater form span textarea {
+    width: 50%;
+    margin: 0px 0px 30px;
+    height: inherit;
+  }
+  .newslater form button {
+    width: 18%;
+    padding: 1.5rem 2rem;
+    position: relative;
+    right: -8.5rem;
+    font-size: 25px;
+    align-items: center;
+  }
+  .newslater form button i {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 60px 0px 10px;
+  }
+  footer img {
+    width: 20%;
+  }
+  footer hr {
+    padding: 2px;
+    opacity: 1;
+    background-color: white;
+    margin: 50px auto 20px;
+  }
+  footer ul li a {
+    font-size: 28px;
+  }
+}/*# sourceMappingURL=contact-us.css.map */

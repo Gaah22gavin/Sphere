@@ -1,0 +1,699 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  width: 100%;
+  height: 13vh;
+  padding: 15px 10px 0px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 40%;
+}
+header .menu {
+  width: 30%;
+  position: relative;
+  cursor: pointer;
+}
+header .menu .line {
+  background-color: white;
+  width: 55%;
+  height: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu .line::before {
+  content: "";
+  background-color: white;
+  width: 55%;
+  height: 6px;
+  position: absolute;
+  transform: translateY(-16px);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu .line::after {
+  content: "";
+  background-color: white;
+  width: 55%;
+  height: 6px;
+  position: absolute;
+  transform: translateY(16px);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu.line-open .line {
+  background-color: transparent;
+}
+header .menu.line-open .line::before {
+  transform: rotate(45deg);
+}
+header .menu.line-open .line::after {
+  transform: rotate(-45deg);
+}
+header ul {
+  display: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Panton-bold";
+}
+header.open {
+  height: 100vh;
+  background-color: #313131;
+}
+header.open ul {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+header.open ul li {
+  padding: 20px 0px;
+  margin: 10px 0px;
+}
+header.open ul li a {
+  font-size: 22px;
+}
+header.open ul .second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header.open ul .second .Contact {
+  font-size: 16px;
+  padding: 0px 10px;
+}
+header.open .menu {
+  position: absolute;
+  top: 7%;
+  left: 4%;
+}
+header.open img {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+.banner {
+  height: 85vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url(../img/banner.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  color: white;
+  font-size: 30px;
+  font-family: "panton-semiBold";
+  text-transform: capitalize;
+}
+
+.Management {
+  margin: 35px 0px;
+  padding: 20px 10px;
+  text-align: center;
+}
+.Management h3 {
+  font-family: "panton-semiBold";
+  font-size: 22px;
+  margin: 15px 0px;
+}
+.Management hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1px;
+}
+.Management .management-text {
+  display: flex;
+  flex-direction: column;
+}
+.Management .management-text h2 {
+  font-family: "Panton-bold";
+  font-size: 21px;
+  line-height: 1.4;
+  margin: 10px 0px;
+}
+.Management .management-text .text p {
+  font-family: "panton-semiBold";
+  font-size: 17px;
+  margin: 10px 0px;
+  line-height: 1.4;
+}
+
+.Entertainment {
+  text-align: center;
+  margin: 20px 0px;
+  padding: 20px 0px;
+}
+.Entertainment h3 {
+  font-family: "panton-semiBold";
+  font-size: 22px;
+  margin: 15px 0px;
+}
+.Entertainment hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1px;
+  width: 92%;
+  margin: 20px auto 40px;
+}
+.Entertainment .Entertainment-box {
+  display: flex;
+  flex-direction: column;
+}
+.Entertainment .Entertainment-box .box {
+  width: 100%;
+  margin: 20px 0px;
+  position: relative;
+}
+.Entertainment .Entertainment-box .box img {
+  width: 100%;
+}
+.Entertainment .Entertainment-box .box .overlay {
+  background-color: rgba(0, 0, 0, 0.645);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.Entertainment .Entertainment-box .box .overlay h2 {
+  font-family: "panton-semiBold";
+  font-size: 22px;
+  color: white;
+  text-align: left;
+}
+.Entertainment .Entertainment-box .box .overlay .over-hr {
+  margin: 10px 0px;
+  padding: 1.5px;
+  background-color: white;
+  opacity: 1;
+  width: 100%;
+}
+.Entertainment .Entertainment-box .box .overlay h4 {
+  font-family: "panton-semiBold";
+  font-size: 14px;
+  color: white;
+  text-align: right;
+}
+
+.Sports {
+  text-align: center;
+  margin: 20px 0px;
+  padding: 20px 0px;
+}
+.Sports h3 {
+  font-family: "panton-semiBold";
+  font-size: 22px;
+  margin: 15px 0px;
+}
+.Sports hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1px;
+  width: 92%;
+  margin: 10px auto 30px;
+}
+.Sports .sport-box {
+  display: flex;
+  flex-direction: column;
+}
+.Sports .sport-box .box {
+  width: 100%;
+  margin: 20px 0px;
+  position: relative;
+}
+.Sports .sport-box .box img {
+  width: 100%;
+}
+.Sports .sport-box .box .overlay {
+  background-color: rgba(0, 0, 0, 0.645);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.Sports .sport-box .box .overlay h2 {
+  font-family: "panton-semiBold";
+  font-size: 22px;
+  color: white;
+  text-align: left;
+}
+.Sports .sport-box .box .overlay .over-hr {
+  margin: 10px 0px;
+  padding: 1.5px;
+  background-color: white;
+  opacity: 1;
+  width: 100%;
+}
+.Sports .sport-box .box .overlay h4 {
+  font-family: "panton-semiBold";
+  font-size: 14px;
+  color: white;
+  text-align: right;
+}
+
+.Brands {
+  text-align: center;
+  margin: 20px 0px;
+  padding: 20px 0px;
+}
+.Brands h3 {
+  font-family: "panton-semiBold";
+  font-size: 22px;
+  margin: 15px 0px;
+}
+.Brands hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1px;
+  width: 92%;
+  margin: 10px auto 30px;
+}
+.Brands .img-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Brands .img-con .images {
+  width: 33.33%;
+  margin: 20px 0px;
+  text-align: center;
+}
+.Brands .img-con .images img {
+  margin: 5px 0px;
+  width: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Brands .img-con .images .record {
+  width: 35%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  text-align: center;
+  padding: 20px 0px;
+}
+footer img {
+  width: 40%;
+  margin: 0px auto;
+}
+footer hr {
+  opacity: 1;
+  background-color: gray;
+  padding: 1px;
+  width: 92%;
+  margin: 20px auto;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer ul li {
+  margin: 10px 15px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "panton-semiBold";
+  font-size: 18px;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    padding: 0px 30px;
+  }
+  header img {
+    width: 25%;
+  }
+  header .menu {
+    width: 15%;
+  }
+  header.open ul {
+    flex-direction: row;
+  }
+  header.open ul li a {
+    font-size: 44px;
+  }
+  header.open ul .second {
+    margin: 0px 30px;
+    flex-direction: column;
+  }
+  header.open ul .second .Contact {
+    font-size: 28px;
+  }
+
+  .banner {
+    height: 65vh;
+  }
+  .banner h1 {
+    font-size: 46px;
+  }
+
+  .Management {
+    margin: 40px 0px 30px;
+    padding: 30px 25px;
+    text-align: left;
+  }
+  .Management h3 {
+    font-size: 34px;
+  }
+  .Management .management-text {
+    flex-direction: row;
+  }
+  .Management .management-text h2 {
+    width: 40%;
+    font-size: 24px;
+  }
+  .Management .management-text .text {
+    width: 60%;
+  }
+  .Management .management-text .text p {
+    font-size: 17px;
+  }
+
+  .Entertainment {
+    text-align: left;
+  }
+  .Entertainment h3 {
+    padding: 0px 0px 0px 28px;
+    font-size: 34px;
+  }
+  .Entertainment .Entertainment-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Entertainment .Entertainment-box .box {
+    width: 47%;
+  }
+  .Entertainment .Entertainment-box .box .overlay h2 {
+    font-size: 24px;
+  }
+  .Entertainment .Entertainment-box .box .overlay h4 {
+    font-size: 18px;
+  }
+
+  .Sports {
+    text-align: left;
+  }
+  .Sports h3 {
+    padding: 0px 0px 0px 28px;
+    font-size: 34px;
+  }
+  .Sports .sport-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Sports .sport-box .box {
+    width: 47%;
+  }
+  .Sports .sport-box .box .overlay h2 {
+    font-size: 24px;
+  }
+  .Sports .sport-box .box .overlay h4 {
+    font-size: 18px;
+  }
+
+  .Brands {
+    text-align: left;
+  }
+  .Brands h3 {
+    padding: 0px 0px 0px 28px;
+    font-size: 34px;
+  }
+  .Brands .img-con .images {
+    width: 25.33%;
+  }
+  .Brands .img-con .images img {
+    width: 50%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+  .Brands .img-con .images .record {
+    width: 30%;
+  }
+
+  footer {
+    padding: 40px 0px 5px;
+  }
+  footer img {
+    width: 30%;
+  }
+  footer hr {
+    margin: 20px auto;
+  }
+  footer ul li a {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    height: 15vh;
+    padding: 0px 40px;
+    align-items: center;
+  }
+  header img {
+    width: 18%;
+  }
+  header .menu {
+    width: 8%;
+  }
+  header.open ul {
+    flex-direction: row;
+  }
+  header.open ul li a {
+    font-size: 53px;
+    transition: color 0.2s ease-in-out;
+  }
+  header.open ul li a:hover {
+    color: gray;
+  }
+  header.open ul .second {
+    margin: 0px 30px;
+    flex-direction: column;
+  }
+  header.open ul .second .Contact {
+    font-size: 29px;
+  }
+
+  .banner {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .banner h1 {
+    font-size: 54px;
+  }
+
+  .Management {
+    margin: 10% 0px;
+    padding: 30px 50px;
+    text-align: left;
+  }
+  .Management h3 {
+    font-size: 25px;
+  }
+  .Management hr {
+    margin: 20px auto 60px;
+    padding: 2px;
+  }
+  .Management .management-text {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .Management .management-text h2 {
+    width: 35%;
+    font-size: 44px;
+    margin: 0px;
+  }
+  .Management .management-text .text {
+    width: 60%;
+  }
+  .Management .management-text .text p {
+    font-size: 25px;
+    margin: 0px 0px 40px;
+  }
+
+  .Entertainment {
+    margin: 10% 0px;
+    padding: 30px 50px;
+    text-align: left;
+  }
+  .Entertainment h3 {
+    font-size: 25px;
+    padding: 0px 0px 0px 20px;
+  }
+  .Entertainment hr {
+    margin: 20px auto 60px;
+    padding: 2px;
+    width: 97%;
+  }
+  .Entertainment .Entertainment-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Entertainment .Entertainment-box .box {
+    width: 32%;
+    margin: 10px 0px;
+  }
+  .Entertainment .Entertainment-box .box .overlay {
+    height: 25%;
+  }
+  .Entertainment .Entertainment-box .box .overlay h2 {
+    font-size: 25px;
+  }
+  .Entertainment .Entertainment-box .box .overlay h4 {
+    font-size: 17px;
+  }
+
+  .Sports {
+    margin: 10% 0px;
+    padding: 30px 50px;
+    text-align: left;
+  }
+  .Sports h3 {
+    font-size: 25px;
+    padding: 0px 0px 0px 20px;
+  }
+  .Sports hr {
+    margin: 20px auto 60px;
+    padding: 2px;
+    width: 97%;
+  }
+  .Sports .sport-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Sports .sport-box .box {
+    width: 32%;
+    margin: 10px 0px;
+  }
+  .Sports .sport-box .box .overlay {
+    height: 25%;
+  }
+  .Sports .sport-box .box .overlay h2 {
+    font-size: 25px;
+  }
+  .Sports .sport-box .box .overlay h4 {
+    font-size: 17px;
+  }
+
+  .Brands {
+    margin: 10% 0px;
+    padding: 30px 50px;
+    text-align: left;
+  }
+  .Brands h3 {
+    font-size: 25px;
+    padding: 0px 0px 0px 24px;
+  }
+  .Brands hr {
+    margin: 20px auto 60px;
+    padding: 2px;
+    width: 97%;
+  }
+  .Brands .img-con .images {
+    width: 33.33%;
+    margin: 20px 0px;
+    text-align: center;
+  }
+  .Brands .img-con .images img {
+    width: 35%;
+    margin: 0 auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .Brands .img-con .images .record {
+    width: 20%;
+  }
+
+  footer {
+    padding: 60px 0px 0px;
+  }
+  footer img {
+    width: 20%;
+  }
+  footer hr {
+    padding: 2px;
+    opacity: 1;
+    background-color: white;
+    margin: 50px auto 20px;
+    width: 93%;
+  }
+  footer ul li a {
+    font-size: 28px;
+  }
+}/*# sourceMappingURL=style.css.map */

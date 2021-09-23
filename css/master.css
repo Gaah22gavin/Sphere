@@ -1,0 +1,26 @@
+body {
+  -webkit-animation: transtionsin 0.75s;
+          animation: transtionsin 0.75s;
+}
+
+@-webkit-keyframes transtionsin {
+  from {
+    opacity: 0;
+    transform: translateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+@keyframes transtionsin {
+  from {
+    opacity: 0;
+    transform: translateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}/*# sourceMappingURL=master.css.map */
