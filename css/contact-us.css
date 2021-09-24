@@ -291,13 +291,13 @@ header.open img {
   justify-content: space-between;
   background-color: black;
   height: 40px;
-  width: 50%;
+  width: 40%;
   color: white;
   outline: none;
   border: black;
   font-family: "Panton-bold";
-  font-size: 22px;
-  padding: 0px 20px;
+  font-size: 15px;
+  padding: 16px 20px;
 }
 
 footer {
@@ -308,7 +308,7 @@ footer {
   padding: 20px 0px;
 }
 footer img {
-  width: 50%;
+  width: 40%;
   margin: 0px auto;
 }
 footer hr {
@@ -322,16 +322,15 @@ footer ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: left;
 }
 footer ul li {
-  margin: 10px 26px;
+  margin: 10px 15px;
 }
 footer ul li a {
   text-decoration: none;
   color: white;
   font-family: "panton-semiBold";
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Portrait tablets and small desktops */

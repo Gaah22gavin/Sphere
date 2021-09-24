@@ -353,20 +353,19 @@ header{
         }
 
         button{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: black;
-            height: 40px;
-            width: 50%;
-            color: white;
-            outline: none;
-            border:rgb(0, 0, 0);
-            font-family: $bold;
-            font-size: 22px;
-            padding: 0px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: black;
+			height: 40px;
+			width: 40%;
+			color: white;
+			outline: none;
+			border: black;
+			font-family: "Panton-bold";
+			font-size: 15px;
+			padding: 16px 20px;
         }
-
 
     }
 }
@@ -380,7 +379,7 @@ footer{
 	text-align: center;
 	padding: 20px 0px;
 	img{
-		width: 50%;
+		width: 40%;
 		margin: 0px auto;
 	}
 	hr{
@@ -394,14 +393,13 @@ footer{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		text-align: left;
 		li{
-			margin: 10px 26px;
+			margin: 10px 15px;
 			a{
 				text-decoration: none;
 				color: white;
 				font-family: $semibold;
-				font-size:18px ;
+				font-size:16px ;
 			}
 		}
 	}

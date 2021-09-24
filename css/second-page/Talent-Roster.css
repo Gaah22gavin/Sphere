@@ -202,19 +202,19 @@ header.open img {
   line-height: 1.4;
 }
 .About-Sphere .About-Sphere-text .text a {
-  width: 45%;
+  width: 43%;
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 13px 20px;
   background-color: black;
   color: white;
   text-decoration: none;
   font-family: "panton-semiBold";
-  font-size: 14px;
+  font-size: 13px;
 }
 .About-Sphere .About-Sphere-text .text a i {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .Portfolio {
@@ -249,19 +249,19 @@ header.open img {
   line-height: 1.4;
 }
 .Portfolio .Portfolio-text .text a {
-  width: 45%;
+  width: 43%;
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 13px 20px;
   background-color: black;
   color: white;
   text-decoration: none;
   font-family: "panton-semiBold";
-  font-size: 14px;
+  font-size: 13px;
 }
 .Portfolio .Portfolio-text .text a i {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .Roster {
@@ -363,7 +363,7 @@ footer {
   padding: 20px 0px;
 }
 footer img {
-  width: 50%;
+  width: 40%;
   margin: 0px auto;
 }
 footer hr {
@@ -377,16 +377,15 @@ footer ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: left;
 }
 footer ul li {
-  margin: 10px 26px;
+  margin: 10px 15px;
 }
 footer ul li a {
   text-decoration: none;
   color: white;
   font-family: "panton-semiBold";
-  font-size: 18px;
+  font-size: 14px;
 }
 
 /* Portrait tablets and small desktops */

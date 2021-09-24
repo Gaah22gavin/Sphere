@@ -258,18 +258,18 @@ header{
 			}
 
             a{
-                width: 45%;
-                margin: 0px auto;
-                display: flex;
-                justify-content: space-between;
-                padding: 15px 20px;
-                background-color: black;
-                color: white;
-                text-decoration: none;
-                font-family: $semibold;
-                font-size: 14px;
+				width: 43%;
+				margin: 0px auto;
+				display: flex;
+				justify-content: space-between;
+				padding: 13px 20px;
+				background-color: black;
+				color: white;
+				text-decoration: none;
+				font-family: "panton-semiBold";
+				font-size: 13px;
                 i{
-                    font-size:16px;
+                    font-size:14px;
                 }
             }
 		}
@@ -314,18 +314,18 @@ header{
 			}
 
             a{
-                width: 45%;
-                margin: 0px auto;
-                display: flex;
-                justify-content: space-between;
-                padding: 15px 20px;
-                background-color: black;
-                color: white;
-                text-decoration: none;
-                font-family: $semibold;
-                font-size: 14px;
+				width: 43%;
+				margin: 0px auto;
+				display: flex;
+				justify-content: space-between;
+				padding: 13px 20px;
+				background-color: black;
+				color: white;
+				text-decoration: none;
+				font-family: "panton-semiBold";
+				font-size: 13px;
                 i{
-                    font-size:16px;
+                    font-size:14px;
                 }
             }
 		}
@@ -447,7 +447,7 @@ footer{
 	text-align: center;
 	padding: 20px 0px;
 	img{
-		width: 50%;
+		width: 40%;
 		margin: 0px auto;
 	}
 	hr{
@@ -461,14 +461,13 @@ footer{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		text-align: left;
 		li{
-			margin: 10px 26px;
+			margin: 10px 15px;
 			a{
 				text-decoration: none;
 				color: white;
 				font-family: $semibold;
-				font-size:18px ;
+				font-size:14px ;
 			}
 		}
 	}

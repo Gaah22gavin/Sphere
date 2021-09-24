@@ -192,7 +192,7 @@ header.open img {
 }
 .Management .management-text .text p {
   font-family: "panton-semiBold";
-  font-size: 17px;
+  font-size: 14px;
   margin: 10px 0px;
   line-height: 1.4;
 }
@@ -383,7 +383,7 @@ footer ul li a {
   text-decoration: none;
   color: white;
   font-family: "panton-semiBold";
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* Portrait tablets and small desktops */

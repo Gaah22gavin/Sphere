@@ -229,19 +229,19 @@ header.open img {
   line-height: 1.4;
 }
 .Our .Our-text .text a {
-  width: 60%;
+  width: 50%;
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 16px 20px;
   background-color: black;
   color: white;
   text-decoration: none;
   font-family: "panton-semiBold";
-  font-size: 14px;
+  font-size: 12px;
 }
 .Our .Our-text .text a i {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 footer {
@@ -274,7 +274,7 @@ footer ul li a {
   text-decoration: none;
   color: white;
   font-family: "panton-semiBold";
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* Portrait tablets and small desktops */

@@ -345,7 +345,7 @@ footer{
 	text-align: center;
 	padding: 20px 0px;
 	img{
-		width: 50%;
+		width: 40%;
 		margin: 0px auto;
 	}
 	hr{
@@ -359,14 +359,13 @@ footer{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		text-align: left;
 		li{
-			margin: 10px 26px;
+			margin: 10px 15px;
 			a{
 				text-decoration: none;
 				color: white;
 				font-family: $semibold;
-				font-size:18px ;
+				font-size:16px ;
 			}
 		}
 	}
