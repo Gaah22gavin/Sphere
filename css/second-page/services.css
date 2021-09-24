@@ -412,12 +412,12 @@ footer ul li a {
 }
 @media (min-width: 1200px) {
   header {
-    height: 15vh;
+    height: 20vh;
     padding: 0px 40px;
     align-items: center;
   }
   header img {
-    width: 18%;
+    width: 20%;
   }
   header .menu {
     width: 8%;
@@ -539,7 +539,7 @@ footer ul li a {
   }
 
   footer {
-    padding: 60px 0px 0px;
+    padding: 60px 0px 20px;
   }
   footer img {
     width: 20%;
@@ -549,6 +549,7 @@ footer ul li a {
     opacity: 1;
     background-color: white;
     margin: 50px auto 20px;
+    width: 93%;
   }
   footer ul li a {
     font-size: 28px;

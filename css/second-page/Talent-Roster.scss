@@ -481,13 +481,14 @@ footer{
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
 	header{
-		padding: 0px 30px;
+		height: 20vh;
+		padding: 0px 40px;
+		align-items: center;
 		img{
-			width: 25%;
+			width: 20%;
 		}
-
 		.menu{
-			width: 15%;
+			width: 8%;
 		}
 
 		&.open{
@@ -495,7 +496,11 @@ footer{
 				flex-direction: row;
 				li{
 					a{
-						font-size: 44px;
+						font-size: 53px;
+						transition: color .2s ease-in-out;
+						&:hover{
+							color:gray;
+						}
 					}
 				}
 
@@ -503,13 +508,12 @@ footer{
 					margin: 0px 30px;
 					flex-direction: column;
 					.Contact{
-						font-size:28px;
+						font-size:29px;
 					}
 				}
 			}
 		}
 	}
-
 	.banner{
 		height: 65vh;
 		h1{
@@ -895,7 +899,7 @@ footer{
     }
 
 	footer{
-		padding: 60px 0px 10px;
+		padding: 60px 0px 20px;
 		img{
 			width: 20%;
 		}
@@ -904,6 +908,7 @@ footer{
 			opacity: 1;
 			background-color: white;
 			margin: 50px auto 20px;
+			width: 93%;
 		}
 
 		ul{

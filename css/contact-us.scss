@@ -200,7 +200,7 @@ header{
 	height: 85vh;
 	background:linear-gradient(to right, rgba(0, 0, 0, 0.501)
 	, rgba(0, 0, 0, 0.501)
-	), url("/img/contact-us.png");
+	), url("../img/contact-us.png");
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -576,11 +576,11 @@ footer{
 // ====================laptop==================
 @media (min-width: 1200px) {
 	header{
-		height: 15vh;
+		height: 20vh;
 		padding: 0px 40px;
 		align-items: center;
 		img{
-			width: 18%;
+			width: 20%;
 		}
 		.menu{
 			width: 8%;
@@ -609,7 +609,6 @@ footer{
 			}
 		}
 	}
-
 	.banner{
 		height: 100vh;
 		background-position: center;
@@ -734,7 +733,7 @@ footer{
 	}
 
 	footer{
-		padding: 60px 0px 10px;
+		padding: 60px 0px 20px;
 		img{
 			width: 20%;
 		}
@@ -743,6 +742,7 @@ footer{
 			opacity: 1;
 			background-color: white;
 			margin: 50px auto 20px;
+			width: 93%;
 		}
 
 		ul{
