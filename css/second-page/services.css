@@ -151,7 +151,7 @@ header.open img {
 
 .banner {
   height: 85vh;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("/img/footerball.png");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("../img/footerball.png");
   background-position: center;
   background-size: cover;
   display: flex;
